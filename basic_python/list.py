@@ -43,3 +43,20 @@
 # print(concatenated_list)
 
 
+# my_list = [1,200,3,4,50,6,7,118,9,10]
+
+# my_list.sort()
+# print(my_list)
+
+
+# sorted_list = sorted(my_list, reverse = True)
+# print(sorted_list)
+
+
+numbers =[1,2,3,4,5]
+
+squared_numbers = [x ** 2 for x in numbers]
+print(squared_numbers)
+
+even_numbers = [x  for x in numbers if x % 2 ==0]
+print(even_numbers)

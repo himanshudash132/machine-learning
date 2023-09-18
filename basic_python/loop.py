@@ -18,3 +18,6 @@ for num in numbers:
       if num ==3:
           break    # Exit the loop
       print(num)
+
+
+      
