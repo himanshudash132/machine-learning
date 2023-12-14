@@ -1,45 +1,62 @@
 welcome to numpy tutorial
+
+
 import numpy as np
 myarr = np.array([[3,6,32,7]], np.int64)
+
 myarr[0,1]
 6
+
 myarr.shape
 (1, 4)
+
 myarr.dtype
 dtype('int64')
+
 myarr[0,1] = 45
 myarr
 array([[ 3, 45, 32,  7]], dtype=int64)
+
 Array creation: Conversion from the other python strutures
+
 listarray = np.array([[1,2,3], [5,8,5], [0,3,1]])
 listarray
 array([[1, 2, 3],
        [5, 8, 5],
        [0, 3, 1]])
+
 listarray.dtype
 dtype('int32')
+
 listarray.shape
 (3, 3)
+
 listarray.size
 9
+
 np.array({34,23,23})
 array({34, 23}, dtype=object)
+
 zeros =np.zeros((2,5))
 zeros
 array([[0., 0., 0., 0., 0.],
        [0., 0., 0., 0., 0.]])
+
 zeros.shape
 (2, 5)
+
 zeros.dtype
 dtype('float64')
-Selection deleted
+
+
 rng = np.arange(15)
-Selection deleted
 rng 
 array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14])
+
 lspace = np.linspace(1,5,4)
 lspace
 array([1.        , 2.33333333, 3.66666667, 5.        ])
+
 emp = np.empty((4,6))
 emp
 array([[6.23042070e-307, 4.67296746e-307, 1.69121096e-306,
@@ -50,9 +67,11 @@ array([[6.23042070e-307, 4.67296746e-307, 1.69121096e-306,
         1.11261502e-306, 1.42410839e-306, 7.56597770e-307],
        [6.23059726e-307, 1.42419530e-306, 6.89805151e-307,
         1.78020169e-306, 1.42410974e-306, 2.22522596e-306]])
+
 emp_like = np.empty_like(lspace)
 emp_like
 array([1.        , 2.33333333, 3.66666667, 5.        ])
+
 ide =  np.identity(45)
 ide
 array([[1., 0., 0., ..., 0., 0., 0.],
@@ -62,8 +81,10 @@ array([[1., 0., 0., ..., 0., 0., 0.],
        [0., 0., 0., ..., 1., 0., 0.],
        [0., 0., 0., ..., 0., 1., 0.],
        [0., 0., 0., ..., 0., 0., 1.]])
+
 ide.shape
 (45, 45)
+
 arr = np.arange(99)
 arr
 array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
@@ -72,6 +93,7 @@ array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
        51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67,
        68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
        85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+       
 arr = arr.reshape(3,33)
 arr
 array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15,
